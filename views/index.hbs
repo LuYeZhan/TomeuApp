@@ -1,7 +1,13 @@
 <section class="splash">
   
   <img src="../public/images/logo.jpg" alt="Tomeu logo">
-  <button class="button top">Sign up</button>
-  <button class="button">Log in</button>
-
+  {{#unless currentUser}}
+    <button class="button top"><a href="/auth/signup">Sign up</a></button>
+    <button class="button"><a href="/auth/login">Log in</a></button>
+  {{/unless}}
+  {{#if currentUser}}
+    <form action="/auth/logout" method="POST">
+      <button type="submit">Logout</button>
+    </form>
+  {{/if}}
 </section>
