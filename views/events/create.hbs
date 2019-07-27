@@ -1,28 +1,24 @@
 <form action="/events/create" method="POST">
   <label for="title">title</label>
-  <input type="text" name="title" id="title" required>
+  <input type="text" name="title" id="title" required placeholder="Pizza night">
   
   <label for="location">Location</label>
-  <input type="text" name="location" id="location" required>
+  <input type="text" name="location" id="location" required placeholder="Barcelona">
 
   <label for="date">Date</label>
-  <input type="date" name="date" id="date" required>
+  <input type="date" name="date" id="date" required >
 
   <label for="attendees">Attendees</label>
-  <input type="number" name="attendees" id="attendees">
+  <input type="number" name="attendees" id="attendees" placeholder="5">
 
   <label for="description">Description</label>
-  <input type="text" name="description" id="description">
+  <input type="text" name="description" id="description" placeholder="esto mola mazo">
 
   <label for="duration">Duration</label>
-  <input type="number" name="duration" id="duration">
-
-  <label for="duration">Duration</label>
-  <input type="number" name="duration" id="duration">
+  <input type="number" name="duration" id="duration" placeholder="30">
 
   <label for="menu">Menu</label>
-  <input type="string" name="menu" id="menu">
-
+  <input type="string" name="menu" id="menu" placeholder="homemade vegan pizza">
 
   <button type="submit">Add an Event</button>
 </form>
