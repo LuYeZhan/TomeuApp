@@ -6,7 +6,7 @@ const Event = require('../models/Event');
 const User = require('../models/User');
 const router = express.Router();
 
-router.get('create', (req, res, next) => {
+router.get('/create', (req, res, next) => {
   res.render('events/create');
 });
 
