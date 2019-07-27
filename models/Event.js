@@ -14,8 +14,8 @@ const eventSchema = new Schema({
     required: true
   },
   date: {
-    type: Date
-
+    type: Date,
+    required: true
   },
   attendees: {
     type: Number,
@@ -26,7 +26,8 @@ const eventSchema = new Schema({
   },
   duration: {
     type: Number,
-    min: 0
+    min: 0,
+    required: true
   },
   image: {
     type: String,
