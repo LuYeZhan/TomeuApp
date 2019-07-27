@@ -1,9 +1,12 @@
-<article class="login">
-  <form action="/auth/login" method="POST">
+<div class="welcome-title">
+  <h2>Welcome,</h2>
+  <h3>Sign in to continue!</h3>
+</div>
+
+  <form class="login" action="/auth/login" method="POST">
     <label for="username">Username</label>
-    <input class="button" for="text" name="username" id="username" required placeholder="Username">
+    <input class="button margin-input" for="text" name="username" id="username" required placeholder="Username">
     <label for="password">Password</label>
-    <input class="button" type="password" name="password" id="password" id="password" placeholder="Password">
-    <button type="submit">Login</button>
+    <input class="button margin-input" type="password" name="password" id="password" id="password" placeholder="Password">
+    <button  class="margin-button" type="submit">Login</button>
   </form>
-</article>

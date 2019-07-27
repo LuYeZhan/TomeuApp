@@ -10,8 +10,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #FFBCAB;
-  width:100%;
+  
+  width:100vw;
   height:100vh;
 }
 
@@ -21,13 +21,14 @@ body {
 body {
   color: #111;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 50px;
+  font-size: 16px;
   line-height: 147%;
 }
 
 h1 {}
 
-h2 {}
+h2 {
+}
 
 h3 {}
 
@@ -76,13 +77,13 @@ p {
 
 /* ---- components ---- */
 
-.button {
+button {
   width: 80%;
-  background-color: #FFFAFA;
+  background-color: #FDA38E;
   color: black;
   border: 1px solid #fff;
-  padding:5%; 
-  border-radius: 3%;
+  padding: 15px;
+  border-radius: 11px;
 }
 
 .button.top{
@@ -101,7 +102,8 @@ li {
 }
 a {
   text-decoration: none;
-  color:black;
+  color: white;
+  font-size: 18px;
 }
 .button-alt {
   color: white;
@@ -125,10 +127,42 @@ section.testimonials .button {
   width:80%
 }
 
-article.signup{
+.signup, .login{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
+  flex-direction: column;
 }
+
+.margin-input{
+  margin: 10px 0;
+}
+.margin-button{
+  margin-top: 45px;
+}
+.welcome-title {
+  position: absolute;
+    left: 6vh;
+    top: 6vh;
+}
+
+input {
+  border: 1px solid #E3E8EB;
+  padding: 17px 15px;
+  border-radius: 11px;
+  width: 80%;
+}
+
+/* reusable styles */
+
+.button-text {
+  color: white;
+  font-size: 18px;
+}
+
+
+
+
+

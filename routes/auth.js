@@ -29,7 +29,7 @@ router.post('/signup', async (req, res, next) => {
     });
     // cualquier request que haga el ususario tiene objeto session
     req.session.currentUser = newUser; //
-    res.redirect('/');
+    res.redirect('/homepage');
   } catch (error) {
     console.log(error);
   }
