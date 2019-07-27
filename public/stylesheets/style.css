@@ -2,6 +2,8 @@
 
 html {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -80,7 +82,7 @@ p {
 button {
   width: 80%;
   background-color: #FDA38E;
-  color: black;
+  color: white;
   border: 1px solid #fff;
   padding: 15px;
   border-radius: 11px;
@@ -102,8 +104,11 @@ li {
 }
 a {
   text-decoration: none;
-  color: white;
+  color: #FDA38E;
   font-size: 18px;
+}
+button a{
+  color:white;
 }
 .button-alt {
   color: white;
@@ -162,7 +167,64 @@ input {
   font-size: 18px;
 }
 
+.resize{
+  width: 70%;
+}
 
+.resizeplus{
+  width: 40px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 375px) {
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(50px, 200px);
+  grid-template-rows: 30px 1fr;
+  grid-gap: 15px;
+  grid-template-areas: 
+  "title ."
+  "image info"
+}
+}
+
+
+.title {
+  grid-area: title;
+}
+
+.info {
+  grid-area: info;
+}
+
+.image {
+  grid-area: image;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+}
+
+.home-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+nav {
+  background-color: #FDA38E;
+}
 
 
 
