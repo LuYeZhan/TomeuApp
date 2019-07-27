@@ -15,9 +15,11 @@ const eventSchema = new Schema({
   },
   date: {
     type: Date
+
   },
   attendees: {
-    type: Number
+    type: Number,
+    required: true
   },
   description: {
     type: String
@@ -30,10 +32,12 @@ const eventSchema = new Schema({
     type: String,
     default: '/public/images/default-img-event.jpg'
   },
-  carta: {
-
+  menu: {
+    type: String
   },
   creator: String
+}, {
+  timestamps: true
 });
 
 const Event = mongoose.model('Event', eventSchema);

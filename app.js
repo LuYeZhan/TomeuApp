@@ -12,6 +12,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
 const homepageRouter = require('./routes/homepage');
+const eventsRouter = require('./routes/events');
 
 const app = express();
 
@@ -55,6 +56,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/homepage', homepageRouter);
+app.use('/events', eventsRouter);
 
 // -- 404 and error handler
 
