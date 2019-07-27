@@ -8,7 +8,7 @@ const User = require('../models/User.js');
 /* GET users listing. */
 router.get('/profile', async (req, res, next) => {
   const userId = req.session.currentUser._id;
-  // const user = await User.findById(userId).populate('recipes');
+  const user = await User.findById(userId).populate('recipes');
   res.render('profile', user);
 });
 

@@ -13,6 +13,7 @@ const usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
 const homepageRouter = require('./routes/homepage');
 const eventsRouter = require('./routes/events');
+const apiRouter = require('./routes/api');
 
 const app = express();
 
@@ -57,6 +58,7 @@ app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/homepage', homepageRouter);
 app.use('/events', eventsRouter);
+app.use('/api', apiRouter);
 
 // -- 404 and error handler
 

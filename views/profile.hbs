@@ -1,2 +1,15 @@
 <h2>Profile page</h2>
 <p>Welcome {{currentUser.username}}</p>
+
+
+<section class="event-list">
+  {{#each events}}
+    <article>
+      <p>{{title}} - {{location}}</p>
+      <button id="{{_id}}">Delete</button>
+    </article>
+  {{/each}}
+</section>
+
+
+<script src="../public/javascripts/main.js"></script>
