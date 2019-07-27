@@ -82,11 +82,11 @@ p {
   color: black;
   border: 1px solid #fff;
   padding:5%; 
+  border-radius: 3%;
 }
 
 .button.top{
-  margin-bottom:5%;
-
+  margin:8% 0;
 }
 .splash{
   display: flex;
@@ -99,7 +99,10 @@ p {
 li {
   list-style-type: none;
 }
-
+a {
+  text-decoration: none;
+  color:black;
+}
 .button-alt {
   color: white;
   background-color: #fff;
@@ -122,3 +125,10 @@ section.testimonials .button {
   width:80%
 }
 
+article.signup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+  height: 100vh;
+}
