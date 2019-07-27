@@ -48,7 +48,7 @@ router.post('/login', async (req, res, next) => {
     }
     if (bcrypt.compareSync(password /* provided password */, user.password/* hashed password */)) {
       req.session.currentUser = user;
-      res.redirect('/');
+      res.redirect('/homepage');
     } else {
       res.redirect('/auth/login');
     }

@@ -1,10 +1,15 @@
 'use strict';
+
 const express = require('express');
 const router = express.Router();
+// const { isNotLoggedIn } = require('../middlewares/authMiddlewares.js');
+const User = require('../models/User.js');
 
 /* GET users listing. */
-router.get('/', (req, res, next) => {
-  res.send('respond with a resource');
+router.get('/profile', async (req, res, next) => {
+  const userId = req.session.currentUser._id;
+  // const user = await User.findById(userId).populate('recipes');
+  res.render('profile', user);
 });
 
 module.exports = router;
