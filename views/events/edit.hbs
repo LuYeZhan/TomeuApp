@@ -1,5 +1,8 @@
 <a href="/users/profile"><</a>
 
+
+
+
 <form action="/events/{{_id}}/edit" method="POST">
   <label for="title">title</label>
   <input type="text" name="title" id="title" required value="{{title}}">
@@ -22,5 +25,5 @@
   <label for="menu">Menu</label>
   <input type="string" name="menu" id="menu" value="{{menu}}">
 
-  <button type="submit">Add an Event</button>
+  <button type="submit">Update an Event</button>
 </form>

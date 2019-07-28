@@ -6,7 +6,7 @@ const main = () => {
 
   const addEventsToDelete = () => {
     // delete recipe
-    const deleteButtons = document.querySelectorAll('article button');
+    const deleteButtons = document.querySelectorAll('article .delete-button');
     deleteButtons.forEach((button) => {
       button.addEventListener('click', async (event) => {
         // request axios post delete ---> delete en db

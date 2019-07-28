@@ -30,18 +30,18 @@ router.post('/create', async (req, res, next) => {
   }
 });
 
-router.get('/:eventId/edit', async (req, res, next) => {
-  const eventId = req.params.eventId;
+router.get('/:id/edit', async (req, res, next) => {
   try {
+    const eventId = req.params.id;
     const event = await Event.findById(eventId);
-    res.render('/events/edit', event);
+    res.render('events/edit', event);
   } catch (error) {
     next(error);
   }
 });
 
-router.post('/:eventId', async (req, res, next) => {
-  const eventId = req.params.eventId;
+router.post('/:id/edit', async (req, res, next) => {
+  const eventId = req.params.id;
   const { title, location, date, duration, attendees, description, menu } = req.body;
   const newEvent = {
     title,
