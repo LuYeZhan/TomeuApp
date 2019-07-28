@@ -12,14 +12,15 @@
   <h3>Tell your story through a dinner!</h3>
   <img class="resize" src="../images/dinner.jpg" alt="dinner with friends">
 </section>
-
+{{#each events}}
 <section class="container">
   <article class="grid-container">
-    <h3 class="title">titulo</h3>
+    <h3 class="title">{{title}}</h3>
     <img class="image" src="../images/default-img-event.jpg" width="200px" alt="placeholder">
     <div class="info">
-      <p>location</p>
-      <p>date</p>
+      <p>location:{{location}}</p>
+      <p>date: {{date}}</p>
     </div>
   </article>
 </section>
+  {{/each}}
