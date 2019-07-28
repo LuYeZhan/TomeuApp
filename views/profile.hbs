@@ -2,7 +2,8 @@
 <p>Welcome {{currentUser.username}}</p>
 <a href="/homepage"><</a>
 
-<form class="event-form" action="/events/create" method="POST">
+<a href="/events/create">></a>
+{{!-- <form class="event-form" action="/events/create" method="POST">
   <label for="title">title</label>
   <input type="text" name="title" id="title" required placeholder="Pizza night">
   
@@ -25,16 +26,16 @@
   <input type="string" name="menu" id="menu" placeholder="homemade vegan pizza">
 
   <button type="submit">Add an Event</button>
-</form>
-
+</form> --}}
+<form class="event-form" action="/events/create" method="POST">
 <section class="event-list">
   {{#each events}}
     <article>
-      <p>{{title}} - {{location}}</p>
-      <button id="{{_id}}">Delete</button>
+      <p>{{title}} - {{location}} - {{image}}</p>
+      <button type="submit" id="{{_id}}">Delete</button>
     </article>
   {{/each}}
 </section>
+</form>
 
-
-<script src="../javascripts/main.js"></script>
+<script src="../javascripts/delete.js"></script>

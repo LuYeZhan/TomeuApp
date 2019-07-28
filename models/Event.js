@@ -31,7 +31,7 @@ const eventSchema = new Schema({
   },
   image: {
     type: String,
-    default: './public/images/default-img-event.jpg'
+    default: '../images/default-img-event.jpg'
   },
   menu: {
     type: String

@@ -2,7 +2,7 @@
 
 const main = () => {
   const form = document.querySelector('.event-form');
-  // const listEvents = document.querySelector('.event-list');
+  const listEvents = document.querySelector('.event-list');
 
   const addEventsToDelete = () => {
     // delete recipe
@@ -27,25 +27,8 @@ const main = () => {
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    console.log(event.srcElement.title.value);
-    console.log(event.srcElement.location.value);
-    console.log(event.srcElement.date.value);
-    console.log(event.srcElement.attendees.value);
-    console.log(event.srcElement.description.value);
-    console.log(event.srcElement.duration.value);
-    console.log(event.srcElement.menu.value);
 
-    const eventProperties = {
-      title: event.srcElement.title.value,
-      location: event.srcElement.location.value,
-      date: event.srcElement.date.value,
-      attendees: event.srcElement.attendees.value,
-      description: event.srcElement.description.value,
-      duration: event.srcElement.duration.value,
-      menu: event.srcElement.menu.value
-    };
-
-    const response = await axios.post('/api/events', eventProperties);
+    const response = await axios.post('/api/events');
     form.reset();
     const newEvent = response.data;
     const article = document.createElement('article');
@@ -58,7 +41,7 @@ const main = () => {
 
     article.appendChild(p);
     article.appendChild(button);
-    // listEvents.appendChild(article);
+    listEvents.appendChild(article);
     addEventsToDelete();
   });
 };
