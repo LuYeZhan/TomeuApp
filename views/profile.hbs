@@ -1,0 +1,24 @@
+<h2>Profile page</h2>
+<p>Welcome {{currentUser.username}}</p>
+<a href="/homepage"><</a>
+
+<a href="/events/create">></a>
+
+<form class="event-form" action="/events/create" method="POST">
+<section class="event-list">
+  {{#each events}}
+    <article >
+      <p class="profile-p"> Event:{{title}} - Location:{{location}}</p>
+      <img src="{{image}}" alt="" width="200px">
+  <button type="submit" id="{{_id}}">Delete</button>
+    </article>
+  {{/each}}
+</section>
+</form>
+
+<form action="events/{{_id}}/edit" method="POST">
+  <button type="submit" id="{{_id}}">Edit</button>
+  </form>
+
+<script src="../javascripts/delete.js"></script>
+

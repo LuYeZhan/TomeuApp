@@ -14,7 +14,6 @@ body {
   padding: 0;
   width:100vw;
   height:100vh;
-  /* overflow: hidden; */
 }
 
 
@@ -32,15 +31,27 @@ h1 {}
 h2 {
 }
 
-h3 {}
+h3 {
 
-p {
-  margin: 0;
 }
 
+p {
+  margin: 1px;
+  padding: 0;
+}
 
+.profile-p{
+  width: 80%;
+  background-color: white;
+  color: black;
+  border: 1px solid grey;
+  padding: 15px;
+  border-radius: 11px;
+  font-size: 16px;
+}
 
 /* ---- layout ---- */
+
 
 #site-header {
   padding: 30px 0;
@@ -223,13 +234,20 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 50vh;
+  margin: 0;
+  padding-top: 50px;
 }
 
 nav {
   background-color: #FDA38E;
   position: fixed;
   width: 100%;
+  /* opacity:0.2; */
 }
+/* nav:hover {
+  opacity: 1;
+ } */
 
 .margin-bottom{
   margin-bottom: 30px;
@@ -241,6 +259,14 @@ nav {
   justify-content: center;
 
 }
+
+.event-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
 
 
 
