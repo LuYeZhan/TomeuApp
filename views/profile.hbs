@@ -7,13 +7,15 @@
 <form class="event-form" action="/events/create" method="POST">
 <section class="event-list">
   {{#each events}}
-    <article>
-      <p>{{title}} - {{location}} - {{image}}</p>
+    <article >
+      <p class="profile-p"> Event:{{title}} - Location:{{location}}</p>
+      <img src="{{image}}" alt="" width="200px">
   <button type="submit" id="{{_id}}">Delete</button>
     </article>
   {{/each}}
 </section>
 </form>
+
 <form action="events/{{_id}}/edit" method="POST">
   <button type="submit" id="{{_id}}">Edit</button>
   </form>
