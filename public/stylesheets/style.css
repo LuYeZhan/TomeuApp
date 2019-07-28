@@ -130,14 +130,6 @@ button a{
 
 /* ---- section ---- */
 
-section.testimonials {
-  // ...
-}
-
-section.testimonials .button {
-  margin-bottom: 10px;
-}
-
 .username{
   border-radius: 5%;
   padding: 1%;
@@ -196,15 +188,17 @@ input {
   align-items: center;
 }
 
+section.container {
+  padding: 20px;
+  width: 100vw;
+}
+
 @media (min-width: 375px) {
 .grid-container {
   display: grid;
-  grid-template-columns: minmax(50px, 200px);
-  grid-template-rows: 30px 1fr;
-  grid-gap: 15px;
-  grid-template-areas: 
-  "title ."
-  "image info"
+    grid-template-rows: 1fr;
+    grid-gap: 15px;
+    grid-template-areas: "title ." "image info";
 }
 }
 
@@ -219,6 +213,7 @@ input {
 
 .image {
   grid-area: image;
+  width: 100%;
 }
 
 ul {
@@ -243,7 +238,7 @@ nav {
   background-color: #FDA38E;
   position: fixed;
   width: 100%;
-  /* opacity:0.2; */
+  top: 0;
 }
 /* nav:hover {
   opacity: 1;
@@ -267,6 +262,9 @@ nav {
   align-content: center;
 }
 
+.delete-update{
+  display:flex;
+}
 
 
 
