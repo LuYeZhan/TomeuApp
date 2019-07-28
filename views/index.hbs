@@ -2,8 +2,8 @@
   
   <img src="./images/logo.jpg" alt="Tomeu logo">
   {{#unless currentUser}}
-    <button class="button top"><a href="/auth/signup">Sign up</a></button>
-    <button class="button"><a href="/auth/login">Log in</a></button>
+    <a class="button top splash-a" href="/auth/signup"><button>Sign up</button></a>
+    <a class="button splash-a" href="/auth/login"><button>Log in</button></a>
   {{/unless}}
   {{#if currentUser}}
     <form action="/auth/logout" method="POST">

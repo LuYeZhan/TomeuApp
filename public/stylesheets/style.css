@@ -14,7 +14,7 @@ body {
   padding: 0;
   width:100vw;
   height:100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 
@@ -54,7 +54,7 @@ p {
   background: #111;
 }
 
-#site-main {
+/* #site-main {
   margin-bottom: 60px;
 }
 
@@ -65,7 +65,7 @@ p {
 .section {
   margin-bottom: 20px;
   padding-top: 20px;
-}
+} */
 
 @media (min-width: 768px) {
   .container {
@@ -87,6 +87,7 @@ button {
   padding: 15px;
   border-radius: 11px;
 }
+
 
 .button.top{
   margin:8% 0;
@@ -226,6 +227,17 @@ nav {
   background-color: #FDA38E;
   position: fixed;
   width: 100%;
+}
+
+.margin-bottom{
+  margin-bottom: 30px;
+}
+
+.splash-a{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
 }
 
 
