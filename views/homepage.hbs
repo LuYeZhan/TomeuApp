@@ -4,14 +4,14 @@
 <section class="home-header">
   <h2>Tell your story through a dinner!</h2>
   <h3>Welcome to Tomeu, {{currentUser.username}}</h3>
-  <img class="resize" src="../images/dinner.jpg" alt="dinner with friends">
+  <img class="resize" src="../images/dinner.jpg" alt="event image">
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime commodi cumque adipisci eos et natus, neque amet esse dicta nemo, fuga, nobis ea quas tenetur! Numquam amet architecto odit id!</p>
 </section>
 {{#each event}}
 <section class="container">
   <article class="grid-container">
     <h3 class="title">{{title}}</h3>
-    <img class="image" src="../images/default-img-event.jpg" alt="placeholder">
+    <img class="image" src="{{image}}" alt="event image">
     <div class="info">
       <p>location:{{location}}</p>
       <p>max guests:{{attendees}}</p>
