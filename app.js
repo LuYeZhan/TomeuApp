@@ -14,6 +14,7 @@ const authRouter = require('./routes/auth');
 const homepageRouter = require('./routes/homepage');
 const eventsRouter = require('./routes/events');
 const apiRouter = require('./routes/api');
+const detailsRouter = require('./routes/details');
 
 const app = express();
 
@@ -59,6 +60,7 @@ app.use('/auth', authRouter);
 app.use('/homepage', homepageRouter);
 app.use('/events', eventsRouter);
 app.use('/api', apiRouter);
+app.use('/details', detailsRouter);
 
 // -- 404 and error handler
 
