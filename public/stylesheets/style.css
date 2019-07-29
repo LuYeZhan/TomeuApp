@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -6,3 +7,265 @@ body {
 a {
   color: #00B7FF;
 }
+=======
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width:100vw;
+  height:100vh;
+}
+
+
+/* ---- typography ---- */
+
+body {
+  color: #111;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 147%;
+}
+
+h1 {}
+
+h2 {
+}
+
+h3 {
+
+}
+
+p {
+  margin: 1px;
+  padding: 0;
+}
+
+.profile-p{
+  width: 100%;
+  background-color: white;
+  color: black;
+  border: 1px solid grey;
+  padding: 15px;
+  border-radius: 11px;
+  font-size: 16px;
+  margin: 5% 0;
+}
+
+/* ---- layout ---- */
+
+
+#site-header {
+  padding: 30px 0;
+  color: white;
+  background: #111;
+}
+
+#site-footer {
+  color: white;
+  padding: 60px 0;
+  background: #111;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 728px;
+    margin: 0 auto;
+  }
+}
+
+/* ---- components ---- */
+
+button {
+  width: 80%;
+  background-color: #FDA38E;
+  color: white;
+  border: 1px solid #fff;
+  padding: 15px;
+  border-radius: 11px;
+  font-size:16px;
+}
+.button-margin{
+  margin: 4% 0;
+}
+
+.button.top{
+  margin:8% 0;
+}
+.splash{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-items: center;
+  height: 100vh;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #FDA38E;
+  font-size: 18px;
+}
+button a{
+  color:white;
+}
+.button-alt {
+  color: white;
+  background-color: #fff;
+}
+
+/* ---- section ---- */
+
+.username{
+  border-radius: 5%;
+  padding: 1%;
+  font-size: 50px;
+  width:80%
+}
+
+.signup, .login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.margin-input{
+  margin: 10px 0;
+}
+.margin-button{
+  margin-top: 45px;
+}
+.welcome-title {
+  position: absolute;
+    left: 6vh;
+    top: 6vh;
+}
+
+input {
+  border: 1px solid #E3E8EB;
+  padding: 17px 15px;
+  border-radius: 11px;
+  width: 100%;
+  font-size: 18px;
+}
+
+/* reusable styles */
+
+.button-text {
+  color: white;
+  font-size: 18px;
+}
+
+.resize{
+  width: 70%;
+}
+
+.resizeplus{
+  width: 40px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.container {
+  padding: 20px;
+  width: 100%;
+}
+
+@media (min-width: 375px) {
+.grid-container {
+  display: grid;
+    grid-template-rows: 1fr;
+    grid-gap: 15px;
+    grid-template-areas: "title ." "image info";
+}
+}
+
+
+.title {
+  grid-area: title;
+}
+
+.info {
+  grid-area: info;
+}
+
+.image {
+  grid-area: image;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+}
+
+.home-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+nav {
+  background-color: #FDA38E;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+/* nav:hover {
+  opacity: 1;
+ } */
+
+.margin-bottom{
+  margin-bottom: 30px;
+}
+
+.splash-a{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.event-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.delete-update{
+  display:flex;
+  width:100%;
+
+}
+
+img {
+  max-width: 100%;
+}
+
+
+>>>>>>> dev

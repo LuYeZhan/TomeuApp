@@ -1,2 +1,18 @@
+<<<<<<< HEAD
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+=======
+<section class="splash">
+  
+  <img src="./images/logo.jpg" alt="Tomeu logo">
+  {{#unless currentUser}}
+    <a class="button top splash-a" href="/auth/signup"><button>Sign up</button></a>
+    <a class="button splash-a" href="/auth/login"><button>Log in</button></a>
+  {{/unless}}
+  {{#if currentUser}}
+    <form action="/auth/logout" method="POST">
+      <button type="submit">Logout</button>
+    </form>
+  {{/if}}
+</section>
+>>>>>>> dev

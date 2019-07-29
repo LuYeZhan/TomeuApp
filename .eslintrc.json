@@ -1,5 +1,6 @@
 {
     "env": {
+<<<<<<< HEAD
         "commonjs": true,
         "es6": true,
         "node": true
@@ -17,3 +18,28 @@
     "rules": {
     }
 }
+=======
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": "standard",
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "rules": {
+      "indent": [
+        2,
+        2
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
+  }
+>>>>>>> dev
