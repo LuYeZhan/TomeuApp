@@ -14,6 +14,15 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
+  country: {
+    type: String
+  },
+  age: {
+    type: Number
+  },
+  about: {
+    type: String
+  },
   events: [{
     type: ObjectId,
     ref: 'Event'

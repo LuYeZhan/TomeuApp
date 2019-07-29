@@ -4,10 +4,14 @@
 <main>
 
 <h2>Profile page</h2>
-<p>Welcome {{currentUser.username}}</p>
 <a href="/homepage"><i class="fas fa-home"> </i></a>
-
 <a href="/events/create">></a>
+
+<section>
+  <p>Welcome {{username}}!</p>
+  
+  <a href="/users/{{_id}}/update-profile">Add info to profile</a>
+</section>
 
 <section class="event-list">
 <form class="event-form" action="/events/create" method="POST">
