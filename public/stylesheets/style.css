@@ -209,6 +209,7 @@ ul {
   justify-content: space-evenly;
   align-items: center;
   margin: 0;
+  padding: 0;
 }
 
 .home-header {
@@ -257,4 +258,11 @@ img {
   max-width: 100%;
 }
 
-
+.nav-logout{
+  background-color: #FDA38E;
+  padding: 0;
+  font-size: 28px;
+  color: white;
+  width: 100%;
+  border-style: none;
+}
