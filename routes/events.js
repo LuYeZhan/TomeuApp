@@ -4,12 +4,14 @@ const express = require('express');
 const Event = require('../models/Event');
 const User = require('../models/User');
 const router = express.Router();
+const parser = require('../config/cloudinary');
 
 router.get('/create', (req, res, next) => {
   res.render('events/create');
 });
 
-router.post('/create', async (req, res, next) => {
+router.post('/create', parser.single('image'), async (req, res, next) => {
+  const imageurl = req.file.secure_url;
   const { title, location, date, duration, attendees, description, menu } = req.body;
   try {
     const event = await Event.create({
@@ -19,7 +21,8 @@ router.post('/create', async (req, res, next) => {
       duration,
       attendees,
       description,
-      menu
+      menu,
+      image: imageurl
     });
     const eventId = event._id;
     const userId = req.session.currentUser._id;
