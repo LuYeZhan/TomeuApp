@@ -42,7 +42,7 @@ router.get('/:id/edit', async (req, res, next) => {
 
 router.post('/:id/edit', async (req, res, next) => {
   const eventId = req.params.id;
-  const { title, location, date, duration, attendees, description, menu } = req.body;
+  const { title, location, date, duration, attendees, description, menu, image } = req.body;
   const newEvent = {
     title,
     location,
@@ -50,7 +50,8 @@ router.post('/:id/edit', async (req, res, next) => {
     duration,
     attendees,
     description,
-    menu
+    menu,
+    image
   };
   try {
     await Event.findByIdAndUpdate(eventId, newEvent);
@@ -72,4 +73,5 @@ router.get('/homepage', async (req, res, next) => {
     next(error);
   }
 });
+
 module.exports = router;
