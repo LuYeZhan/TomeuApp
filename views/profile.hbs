@@ -1,12 +1,16 @@
 
+
+  {{> navbar}}
+<main>
+
 <h2>Profile page</h2>
 <p>Welcome {{currentUser.username}}</p>
 <a href="/homepage"><i class="fas fa-home"> </i></a>
 
 <a href="/events/create">></a>
 
-<form class="event-form" action="/events/create" method="POST">
 <section class="event-list">
+<form class="event-form" action="/events/create" method="POST">
   {{#each events}}
     <article >
       <p class="profile-p"> Event:{{title}} - Location:{{location}}</p>
@@ -17,8 +21,9 @@
       </div>
     </article>
   {{/each}}
-</section>
 </form>
+</section>
+</main>
 
 <script src="../javascripts/delete.js"></script>
 
