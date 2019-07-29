@@ -41,13 +41,14 @@ p {
 }
 
 .profile-p{
-  width: 80%;
+  width: 100%;
   background-color: white;
   color: black;
   border: 1px solid grey;
   padding: 15px;
   border-radius: 11px;
   font-size: 16px;
+  margin: 5% 0;
 }
 
 /* ---- layout ---- */
@@ -65,28 +66,12 @@ p {
   background: #111;
 }
 
-/* #site-main {
-  margin-bottom: 60px;
-}
-
-.container {
-  margin: 0 20px;
-}
-
-.section {
-  margin-bottom: 20px;
-  padding-top: 20px;
-} */
-
 @media (min-width: 768px) {
   .container {
     max-width: 728px;
     margin: 0 auto;
   }
 }
-
-
-
 
 /* ---- components ---- */
 
@@ -99,7 +84,9 @@ button {
   border-radius: 11px;
   font-size:16px;
 }
-
+.button-margin{
+  margin: 4% 0;
+}
 
 .button.top{
   margin:8% 0;
@@ -162,7 +149,7 @@ input {
   border: 1px solid #E3E8EB;
   padding: 17px 15px;
   border-radius: 11px;
-  width: 80%;
+  width: 100%;
   font-size: 18px;
 }
 
@@ -190,7 +177,7 @@ input {
 
 section.container {
   padding: 20px;
-  width: 100vw;
+  width: 100%;
 }
 
 @media (min-width: 375px) {
@@ -229,16 +216,14 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 50vh;
   margin: 0;
-  padding-top: 50px;
 }
 
 nav {
   background-color: #FDA38E;
   position: fixed;
   width: 100%;
-  top: 0;
+  bottom: 0;
 }
 /* nav:hover {
   opacity: 1;
@@ -264,6 +249,8 @@ nav {
 
 .delete-update{
   display:flex;
+  width:100%;
+
 }
 
 

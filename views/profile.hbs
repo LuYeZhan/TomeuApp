@@ -1,7 +1,7 @@
 
 <h2>Profile page</h2>
 <p>Welcome {{currentUser.username}}</p>
-<a href="/homepage"><i class="fas fa-home"> <</i></a>
+<a href="/homepage"><i class="fas fa-home"> </i></a>
 
 <a href="/events/create">></a>
 
@@ -10,10 +10,10 @@
   {{#each events}}
     <article >
       <p class="profile-p"> Event:{{title}} - Location:{{location}}</p>
-      <img src="{{image}}" alt="" width="200px">
+      <img src="{{image}}" alt="user's picture">
       <div class="delete-update">
-        <button><a href="/events/{{_id}}/edit">Edit</a></button>
-        <button type="submit" id="{{_id}}">Delete</button>
+        <button class="button-margin"><a href="/events/{{_id}}/edit">Edit</a></button>
+        <button class="button-margin" type="submit" id="{{_id}}">Delete</button>
       </div>
     </article>
   {{/each}}
