@@ -23,6 +23,10 @@ const userSchema = new Schema({
   about: {
     type: String
   },
+  image: {
+    type: String,
+    default: '../images/default-img-event.jpg'
+  },
   events: [{
     type: ObjectId,
     ref: 'Event'

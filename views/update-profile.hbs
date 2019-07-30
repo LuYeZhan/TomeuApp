@@ -1,4 +1,5 @@
 <h1>Update your Profile! </h1>
+{{>navbar}}
 
 <form action="update-profile" method="POST" enctype="multipart/form-data">
   <label for="username">Username</label>
@@ -17,7 +18,7 @@
   <input type="text" name="about" id="about">
 
   <label for="image">Add image</label>
-  <input type="file" name="image"/>
+  <input type="file" name="image" value={{image}}/>
 
   <button type="submit">Update your profile!</button>
 </form>
