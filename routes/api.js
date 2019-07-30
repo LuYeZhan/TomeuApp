@@ -37,18 +37,5 @@ router.post('/events/:id/delete', async (req, res, next) => {
     next(error);
   }
 });
-<<<<<<< HEAD
-=======
-*/
-router.post('/events/:id/delete', async (req, res, next) => {
-  try {
-    const { id } = req.params;
-    await Event.findByIdAndDelete(id);
-    res.json({ message: 'Ok' });
-  } catch (error) {
-    next(error);
-  }
-});
->>>>>>> eecbb7ac47ce88fd82b52083fe2cf0a7034eb0c3
 
 module.exports = router;
