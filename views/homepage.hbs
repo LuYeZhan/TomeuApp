@@ -1,12 +1,14 @@
 {{> navbar}}
 <main class="structure">
+  <h3>Welcome {{currentUser.username}}</h3>
 <section>
 <section class="home-header">
   <h2>Tell your story through a dinner!</h2>
-  <h3>Welcome to Tomeu, {{currentUser.username}}</h3>
   <img class="resize" src="../images/dinner.jpg" alt="event image">
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime commodi cumque adipisci eos et natus, neque amet esse dicta nemo, fuga, nobis ea quas tenetur! Numquam amet architecto odit id!</p>
 </section>
+<a href="/events/create"><button>Create your own Event!</button></a>
+<h2>Check out all the events!</h2>
 {{#each event}}
 <section class="container">
   <article class="grid-container">
@@ -15,7 +17,7 @@
     <div class="info">
       <p>location:{{location}}</p>
       <p>max guests:{{attendees}}</p>
-      <a href="details/{{_id}}">ruta</a>
+      <a href="details/{{_id}}">See more details</a>
     </div>
   </article>
 </section>

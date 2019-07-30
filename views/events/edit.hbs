@@ -1,25 +1,24 @@
 {{> navbar}}
 <main class="structure">
-<a href="/users/profile"><</a>
-<h3>Edit's Page</h3>
+<h3>Edit you event</h3>
 
-<form class="event-form" action="/events/{{_id}}/edit" method="POST">
-  <label for="title">title</label>
+<form class="event-form" action="/events/{{_id}}/edit" method="POST" enctype="multipart/form-data">
+  <label for="title">Event title</label>
   <input type="text" name="title" id="title" required value="{{title}}">
   
-  <label for="location">Location</label>
+  <label for="location">Where?</label>
   <input type="text" name="location" id="location" required value="{{location}}">
 
-  <label for="date">Date</label>
+  <label for="date">When?</label>
   <input type="date" name="date" id="date" required value="{{date}}">
 
-  <label for="attendees">Attendees</label>
+  <label for="attendees">How many people can join?</label>
   <input type="number" name="attendees" id="attendees" value="{{attendees}}">
 
-  <label for="description">Description</label>
+  <label for="description">What makes the event special?</label>
   <input type="text" name="description" id="description" value="{{description}}">
 
-  <label for="duration">Duration</label>
+  <label for="duration">How long does it last?</label>
   <input type="number" name="duration" id="duration" value="{{duration}}">
 
   <label for="menu">Menu</label>
@@ -28,6 +27,6 @@
   <label for="image">Add image</label>
   <input type="file" name="image"/>
 
-  <button type="submit">Update an Event</button>
+  <button type="submit">Update your event!</button>
 </form>
 </main>

@@ -29,6 +29,7 @@ body {
 h1 {}
 
 h2 {
+  line-height: 150%;
 }
 
 h3 {
@@ -44,7 +45,6 @@ p {
   width: 100%;
   background-color: white;
   color: black;
-  font-size: 16px;
   margin: 5% 0;
 }
 
@@ -139,7 +139,7 @@ button a{
 .welcome-title {
   position: absolute;
     left: 6vh;
-    top: 6vh;
+    top: 2vh;
 }
 
 input {
@@ -158,7 +158,9 @@ input {
 }
 
 .resize{
-  width: 70%;
+  width: 97%;
+  border-radius: 20%;
+}
 }
 
 .resizeplus{
@@ -215,6 +217,7 @@ ul {
   align-items: center;
   flex-direction: column;
   margin: 0;
+  text-align: center;
 }
 
 nav {
@@ -241,11 +244,9 @@ nav {
 }
 
 .event-form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
+  margin-bottom: 10%;
 }
+
 
 .delete-update{
   display:flex;
@@ -303,4 +304,8 @@ i {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+input {
+  margin-bottom: 20px;
 }
