@@ -3,6 +3,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User.js');
+const Event = require('../models/Event');
 const parser = require('../config/cloudinary');
 
 /* GET users listing. */
@@ -52,15 +53,6 @@ router.post('/:id/delete', async (req, res, next) => {
     await User.findByIdAndRemove(userId);
     delete req.session.currentUser;
     res.redirect('/');
-  } catch (error) {
-    next(error);
-  }
-});
-
-router.post('/details/:id', async (req, res, next) => {
-  const eventsId = req.params.id;
-  try {
-    await events.findByIdAndUpdate(eventsId);
   } catch (error) {
     next(error);
   }
