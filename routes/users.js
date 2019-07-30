@@ -57,4 +57,13 @@ router.post('/:id/delete', async (req, res, next) => {
   }
 });
 
+router.post('/details/:id', async (req, res, next) => {
+  const eventsId = req.params.id;
+  try {
+    await events.findByIdAndUpdate(eventsId);
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = router;

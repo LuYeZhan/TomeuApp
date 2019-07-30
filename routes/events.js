@@ -12,6 +12,12 @@ router.get('/create', (req, res, next) => {
 
 router.post('/create', parser.single('image'), async (req, res, next) => {
   let imageurl;
+  const events = await Event.find();
+  for (const event of events) {
+    if (event.title === req.body.title) {
+      return res.redirect('/events/create');
+    }
+  }
   console.log(req.file);
   if (req.file !== undefined) {
     imageurl = req.file.secure_url;
