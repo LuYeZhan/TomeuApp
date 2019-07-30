@@ -37,7 +37,11 @@ const eventSchema = new Schema({
     type: String
   },
   creator: String
-}, {
+},  },
+events: [{
+  type: ObjectId,
+  ref: 'Event'
+}]{
   timestamps: true
 });
 
