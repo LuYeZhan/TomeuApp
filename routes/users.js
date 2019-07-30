@@ -49,7 +49,11 @@ router.post('/:id/update-profile', parser.single('image'), async (req, res, next
 router.post('/:id/delete', async (req, res, next) => {
   const userId = req.params.id;
   try {
+<<<<<<< HEAD
     await User.findByIdAndRemove(userId);
+=======
+    await User.findByIdAndRemove(userId, eventId);
+>>>>>>> eecbb7ac47ce88fd82b52083fe2cf0a7034eb0c3
     delete req.session.currentUser;
     res.redirect('/');
   } catch (error) {
