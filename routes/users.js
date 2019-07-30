@@ -4,13 +4,9 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User.js');
 const parser = require('../config/cloudinary');
-const Event = require('../models/Event');
 
 /* GET users listing. */
 router.get('/profile', async (req, res, next) => {
-  const userId = req.session.currentUser._id;
-  const user = await User.findById(userId).populate('events');
-  res.render('profile', user);
   try {
     const userId = req.session.currentUser._id;
     const user = await User.findById(userId).populate('events');
@@ -52,10 +48,8 @@ router.post('/:id/update-profile', parser.single('image'), async (req, res, next
 
 router.post('/:id/delete', async (req, res, next) => {
   const userId = req.params.id;
-  const eventId = req.params.id;
   try {
     await User.findByIdAndRemove(userId);
-    await Event.findByIdAndRemove(eventId);
     delete req.session.currentUser;
     res.redirect('/');
   } catch (error) {

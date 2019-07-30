@@ -1,16 +1,20 @@
 {{> navbar}}
-<main>
+<main class="structure">
 <p>Welcome {{currentUser.username}}</p>
-<section>
-  <article>
-    <p>{{title}}</p>
+<a href="/users/profile"><</a>
+<section class="structure">
+  <article class="details-structure">
+    <h3>{{title}}</h3>
     <img src="{{image}}" alt="events picture">
-    <p>Where? {{location}}</p>
-    <p>When? {{date}}</p>
-    <p>{{attendees}}</p>
-    <p>{{description}}</p>
-    <p>{{duration}}</p>
-    <p>{{menu}}</p>
+    <p>Location: {{location}}</p>
+    <p>Date: {{date}}</p>
+    <p>max attendees:{{attendees}}</p>
+    <p>description:{{description}}</p>
+    <p>duration:{{duration}}</p>
+    <p>menu:{{menu}}</p>
+    <form action="" method="POST">
+      <button type="submit">Join</button>
+    </form>
   </article>
 </section>
 </main>

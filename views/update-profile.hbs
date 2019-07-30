@@ -1,6 +1,6 @@
-<h1>Update your Profile! </h1>
 {{>navbar}}
-
+<main class="structure">
+<h1>Update your Profile! </h1>
 <form action="update-profile" method="POST" enctype="multipart/form-data">
   <label for="username">Username</label>
   <input type="text" name="username" id="username" value="{{username}}">
@@ -19,3 +19,4 @@
 
   <button type="submit">Update your profile!</button>
 </form>
+</main>

@@ -55,11 +55,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/api', apiRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/homepage', homepageRouter);
 app.use('/events', eventsRouter);
-app.use('/api', apiRouter);
 app.use('/details', detailsRouter);
 
 // -- 404 and error handler
