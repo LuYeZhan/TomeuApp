@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const eventSchema = new Schema({
   title: {
@@ -39,8 +39,8 @@ const eventSchema = new Schema({
   creator: String
 }, {
   timestamps: true
-})
+});
 
-const Event = mongoose.model('Event', eventSchema)
+const Event = mongoose.model('Event', eventSchema);
 
-module.exports = Event
+module.exports = Event;
