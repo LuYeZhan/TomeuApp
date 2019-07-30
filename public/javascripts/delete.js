@@ -24,7 +24,7 @@ const main = () => {
   addEventsToDelete();
 
   // add recipe
-
+/*
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -43,7 +43,7 @@ const main = () => {
     article.appendChild(button);
     listEvents.appendChild(article);
     addEventsToDelete();
-  });
+  }); */
 };
 
 window.addEventListener('load', main);

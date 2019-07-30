@@ -1,7 +1,8 @@
 {{> navbar}}
-<main>
+<main class="structure">
 <p>Welcome {{currentUser.username}}</p>
-<section>
+<a href="/users/profile"><</a>
+<section class="structure">
   <article>
     <p>{{title}}</p>
     <img src="{{image}}" alt="events picture">
@@ -11,6 +12,9 @@
     <p>{{description}}</p>
     <p>{{duration}}</p>
     <p>{{menu}}</p>
+    <form action="" method="POST">
+      <button type="submit">Join</button>
+    </form>
   </article>
 </section>
 </main>

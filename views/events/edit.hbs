@@ -1,5 +1,8 @@
+{{> navbar}}
+<main class="structure">
 <a href="/users/profile"><</a>
 <h3>Edit's Page</h3>
+
 <form class="event-form" action="/events/{{_id}}/edit" method="POST">
   <label for="title">title</label>
   <input type="text" name="title" id="title" required value="{{title}}">
@@ -22,5 +25,9 @@
   <label for="menu">Menu</label>
   <input type="string" name="menu" id="menu" value="{{menu}}">
 
+  <label for="image">Add image</label>
+  <input type="file" name="image"/>
+
   <button type="submit">Update an Event</button>
 </form>
+</main>

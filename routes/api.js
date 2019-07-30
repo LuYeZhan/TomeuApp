@@ -7,7 +7,7 @@ const Event = require('../models/Event');
 const User = require('../models/User');
 
 /* GET home page. */
-router.post('/events', async (req, res, next) => {
+/* router.post('/events', async (req, res, next) => {
   const { title, location, date, duration, attendees, description, menu } = req.body;
   try {
     const event = await Event.create({
@@ -27,11 +27,15 @@ router.post('/events', async (req, res, next) => {
     next(error);
   }
 });
-
+*/
 router.post('/events/:id/delete', async (req, res, next) => {
-  const { id } = req.params;
-  await Event.findByIdAndDelete(id);
-  res.json({ message: 'Ok' });
+  try {
+    const { id } = req.params;
+    await Event.findByIdAndDelete(id);
+    res.json({ message: 'Ok' });
+  } catch (error) {
+    next(error);
+  }
 });
 
 module.exports = router;

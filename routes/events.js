@@ -11,8 +11,16 @@ router.get('/create', (req, res, next) => {
 });
 
 router.post('/create', parser.single('image'), async (req, res, next) => {
-  const imageurl = req.file.secure_url;
+  let imageurl;
+  console.log(req.file);
+  if (req.file !== undefined) {
+    imageurl = req.file.secure_url;
+  } else {
+    imageurl = '../images/default-img-event.jpg';
+  }
+
   const { title, location, date, duration, attendees, description, menu } = req.body;
+
   try {
     const event = await Event.create({
       title,
@@ -43,9 +51,15 @@ router.get('/:id/edit', async (req, res, next) => {
   }
 });
 
-router.post('/:id/edit', async (req, res, next) => {
+router.post('/:id/edit', parser.single('image'), async (req, res, next) => {
   const eventId = req.params.id;
-  const { title, location, date, duration, attendees, description, menu, image } = req.body;
+  let imageurl;
+  if (req.file !== undefined) {
+    imageurl = req.file.secure_url;
+  } else {
+    imageurl = '../images/default-img-event.jpg';
+  }
+  const { title, location, date, duration, attendees, description, menu } = req.body;
   const newEvent = {
     title,
     location,
@@ -54,7 +68,7 @@ router.post('/:id/edit', async (req, res, next) => {
     attendees,
     description,
     menu,
-    image
+    image: imageurl
   };
   try {
     await Event.findByIdAndUpdate(eventId, newEvent);

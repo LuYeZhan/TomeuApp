@@ -44,9 +44,6 @@ p {
   width: 100%;
   background-color: white;
   color: black;
-  border: 1px solid grey;
-  padding: 15px;
-  border-radius: 11px;
   font-size: 16px;
   margin: 5% 0;
 }
@@ -225,6 +222,8 @@ nav {
   position: fixed;
   width: 100%;
   bottom: 0;
+  color: white;
+  padding: 3%;
 }
 /* nav:hover {
   opacity: 1;
@@ -261,8 +260,47 @@ img {
 .nav-logout{
   background-color: #FDA38E;
   padding: 0;
-  font-size: 28px;
   color: white;
   width: 100%;
   border-style: none;
+}
+
+.structure{
+  padding: 5%;
+  margin-bottom: 8%;
+}
+
+i {
+  color: white;
+  width: 100%;
+  font-size: 28px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: row;
+  border-style: groove;
+  padding: 3%;
+}
+
+.profile-button {
+  padding: 5px;
+  width: 50%;
+  margin-bottom: 3%;
+}
+
+.blue-icon {
+  color: #00CED1;
+}
+
+.info-event {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
