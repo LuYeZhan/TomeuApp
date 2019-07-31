@@ -40,7 +40,7 @@ router.post('/create', parser.single('image'), async (req, res, next) => {
     });
     const eventId = event._id;
     const userId = req.session.currentUser._id;
-    await User.findByIdAndUpdate(userId, { $push: { events: eventId } });
+    await User.findByIdAndUpdate(userId, { $push: { myevents: eventId } });
     res.redirect('/users/profile');
   } catch (error) {
     next(error);
