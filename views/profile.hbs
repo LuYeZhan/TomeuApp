@@ -13,7 +13,7 @@
     <article>
       <img class="profile-img" src="{{image}}" alt="{{username}} image">
       <a href="/users/{{_id}}/update-profile"><button class="profile-button">Edit profile</button></a>
-      <form action="/users/{{_id}}/delete" method="POST">
+      <form class="profile-delete" id={{id}} action="/users/{{_id}}/delete" method="POST"></form>
         <button class="profile-button" type="submit" id="{{_id}}">Delete profile</button>
       </form>
     </article>
@@ -22,7 +22,7 @@
   <h2>My Events</h2>
   <a href="/events/create"><button>Create your own Event!</button></a>
   <section class="event-list">
-    <form class="event-form">
+   
       {{#each events}}
         <article>
           <div class="info-event"> 
@@ -38,7 +38,7 @@
           </div>
         </article>
         {{/each}}
-    </form>
+    
   </section>
 </main>
 

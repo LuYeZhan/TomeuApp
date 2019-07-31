@@ -6,6 +6,7 @@ const main = () => {
     const deleteButtons = document.querySelectorAll('article .button-delete');
     deleteButtons.forEach((button) => {
       button.addEventListener('click', async (event) => {
+        console.log('clicked');
         const id = event.target.id;
         console.log(id);
         const response = await axios.post(`/api/events/${id}/delete`);
