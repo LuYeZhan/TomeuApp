@@ -1,29 +1,38 @@
-{{>navbar}}
-{{>footer}}
+
 <main class="structure">
   <section>
-   <h3>Welcome {{currentUser.username}}</h3>
+    <section class="header">
+      <h2>Welcome {{currentUser.username}}</h2>
+    </section>
+    </section>
+    <section class="home-header">
+      <img class="resize" src="../images/dinner.jpg" alt="event image">
+      <section class="text-card">
+        <h2>Tell your story through a dinner!</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime commodi cumque adipisci eos et natus, neque amet esse dicta nemo, fuga, nobis ea quas tenetur! Numquam amet architecto odit id!</p>
+      </section>
   </section>
-<section>
-<section class="home-header">
-  <h2>Tell your story through a dinner!</h2>
-  <img class="resize" src="../images/dinner.jpg" alt="event image">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime commodi cumque adipisci eos et natus, neque amet esse dicta nemo, fuga, nobis ea quas tenetur! Numquam amet architecto odit id!</p>
+
+  <section>
+    <h2>Check out all the events!</h2>
+    {{#each event}}
+    <section class="container">
+      <article>
+        <h3 class="title">{{title}}</h3>
+        <a href="details/{{_id}}"><img class="image" src="{{image}}" alt="event image"></a>
+        <section class="info">
+          <section class="section-card">
+          <i class="fas fa-map-marker-alt blue-icon"></i>
+          <p class="p-style">{{location}}</p>
+          </section>
+          <section class="section-card">
+            <i class="fas fa-user-friends"></i>
+          <p class="p-style">{{attendees}}</p>
+          </section>
+        </section>
+      </article>
+    </section>
+    {{/each}}
 </section>
-<a href="/events/create"><button>Create your own Event!</button></a>
-<h2>Check out all the events!</h2>
-{{#each event}}
-<section class="container">
-  <article class="grid-container">
-    <h3 class="title">{{title}}</h3>
-    <img class="image" src="{{image}}" alt="event image">
-    <div class="info">
-      <p>location:{{location}}</p>
-      <p>max guests:{{attendees}}</p>
-      <a href="details/{{_id}}">See more details</a>
-    </div>
-  </article>
-</section>
-  {{/each}}
-  </section>
 </main>
+{{>footer}}
