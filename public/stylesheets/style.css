@@ -344,3 +344,8 @@ input {
  .show-guests{
    width: 100%;
  }
+
+ .opacity{
+   opacity:0.2;
+
+ }

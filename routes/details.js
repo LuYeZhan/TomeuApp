@@ -1,8 +1,9 @@
 'use strict';
 
 const express = require('express');
-const Event = require('../models/Event');
 const router = express.Router();
+const Event = require('../models/Event');
+const User = require('../models/User');
 
 router.get('/:id', async (req, res, next) => {
   try {
@@ -30,7 +31,8 @@ router.post('/:id', async (req, res, next) => {
   //   }
   // }
   try {
-    await Event.findByIdAndUpdate(eventId, { $push: { guests: userId } }).populate('guests');
+    await Event.findByIdAndUpdate(eventId, { $push: { guests: userId } });
+    await User.findByIdAndUpdate(userId, { $push: { events: eventId } });
     res.redirect('/homepage');
   } catch (error) {
     next(error);

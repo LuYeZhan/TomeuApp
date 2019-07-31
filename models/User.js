@@ -27,6 +27,10 @@ const userSchema = new Schema({
     type: String,
     default: '../images/profile-icon.png'
   },
+  myevents: [{
+    type: ObjectId,
+    ref: 'Event'
+  }],
   events: [{
     type: ObjectId,
     ref: 'Event'
