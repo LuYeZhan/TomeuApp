@@ -3,7 +3,6 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User.js');
-const Event = require('../models/Event');
 const parser = require('../config/cloudinary');
 
 /* GET users listing. */
@@ -28,8 +27,14 @@ router.get('/:id/update-profile', async (req, res, next) => {
 });
 
 router.post('/:id/update-profile', parser.single('image'), async (req, res, next) => {
-  const imageurl = req.file.secure_url;
+  // const imageurl = req.file.secure_url;
   const userId = req.params.id;
+  let imageurl;
+  if (req.file !== undefined) {
+    imageurl = req.file.secure_url;
+  } else {
+    imageurl = '../images/profile-icon.png';
+  }
   const { username, country, age, about, password } = req.body;
   const newUser = {
     username,
