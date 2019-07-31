@@ -5,12 +5,13 @@ const Event = require('../models/Event');
 const User = require('../models/User');
 const router = express.Router();
 const parser = require('../config/cloudinary');
+const { isNotLoggedIn, isCorrectId } = require('../middlewares/authMiddlewares.js');
 
-router.get('/create', (req, res, next) => {
+router.get('/create', isNotLoggedIn, (req, res, next) => {
   res.render('events/create');
 });
 
-router.post('/create', parser.single('image'), async (req, res, next) => {
+router.post('/create', isNotLoggedIn, parser.single('image'), async (req, res, next) => {
   let imageurl;
   const events = await Event.find();
   for (const event of events) {
@@ -47,7 +48,7 @@ router.post('/create', parser.single('image'), async (req, res, next) => {
   }
 });
 
-router.get('/:id/edit', async (req, res, next) => {
+router.get('/:id/edit', isNotLoggedIn, isCorrectId, async (req, res, next) => {
   try {
     const eventId = req.params.id;
     const event = await Event.findById(eventId);
@@ -57,7 +58,7 @@ router.get('/:id/edit', async (req, res, next) => {
   }
 });
 
-router.post('/:id/edit', parser.single('image'), async (req, res, next) => {
+router.post('/:id/edit', isNotLoggedIn, isCorrectId, parser.single('image'), async (req, res, next) => {
   const eventId = req.params.id;
   let imageurl;
   if (req.file !== undefined) {
@@ -84,7 +85,7 @@ router.post('/:id/edit', parser.single('image'), async (req, res, next) => {
   }
 });
 
-router.get('/homepage', async (req, res, next) => {
+router.get('/homepage', isNotLoggedIn, async (req, res, next) => {
   const userId = req.session.currentUser._id;
   const user = await User.findById(userId).populate('events');
   res.render('homepage', user);

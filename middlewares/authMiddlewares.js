@@ -1,4 +1,5 @@
 'use strict';
+const ObjectId = require('mongoose').Types.ObjectId;
 
 const isLoggedIn = (req, res, next) => {
   if (req.session.currentUser) {
@@ -10,6 +11,14 @@ const isLoggedIn = (req, res, next) => {
 const isNotLoggedIn = (req, res, next) => {
   if (!req.session.currentUser) {
     return res.redirect('/');
+  }
+  next();
+};
+
+const isCorrectId = (req, res, next) => {
+  const userId = req.params.id;
+  if (!ObjectId.isValid(userId)) {
+    return res.redirect('/homepage');
   }
   next();
 };
@@ -29,5 +38,6 @@ const isFormFilled = (req, res, next) => {
 module.exports = {
   isLoggedIn,
   isNotLoggedIn,
-  isFormFilled
+  isFormFilled,
+  isCorrectId
 };
