@@ -187,6 +187,17 @@ section.container {
   grid-area: title;
 }
 
+/* ---- footer---- */
+
+footer {
+  background-color: #FDA38E;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: white;
+  padding: 3%;
+}
+
 .info {
   grid-area: info;
 }
@@ -214,17 +225,7 @@ ul {
   text-align: center;
 }
 
-footer {
-  background-color: #FDA38E;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  color: white;
-  padding: 3%;
-}
-/* nav:hover {
-  opacity: 1;
- } */
+
 
 .margin-bottom{
   margin-bottom: 30px;
@@ -341,4 +342,13 @@ input {
 
  .opacity{
    opacity:0.2;
+ }
+
+ nav {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  height: 8%;
+  width: 100%;
+  border: 1px solid 	rgb(220,220,220, 0.2)
  }
