@@ -15,6 +15,7 @@ const homepageRouter = require('./routes/homepage');
 const eventsRouter = require('./routes/events');
 const apiRouter = require('./routes/api');
 const detailsRouter = require('./routes/details');
+const flash = require('connect-flash');
 
 const app = express();
 
@@ -37,6 +38,8 @@ app.use(session({
     maxAge: 24 * 60 * 60 * 1000
   }
 }));
+
+app.use(flash());
 
 app.use((req, res, next) => {
   app.locals.currentUser = req.session.currentUser;
