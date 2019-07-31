@@ -9,7 +9,13 @@ const parser = require('../config/cloudinary');
 router.get('/profile', async (req, res, next) => {
   try {
     const userId = req.session.currentUser._id;
-    const user = await User.findById(userId).populate('events');
+    const user = await User.findById(userId).populate({
+      path: 'events',
+      populate: {
+        path: 'guests'
+      }
+    });
+    console.log(user.events[0].guests[0].username);
     res.render('profile', user);
   } catch (error) {
     next(error);
