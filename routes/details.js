@@ -30,7 +30,7 @@ router.post('/:id', async (req, res, next) => {
   //   }
   // }
   try {
-    await Event.findByIdAndUpdate(eventId, { $push: { guests: userId } });
+    await Event.findByIdAndUpdate(eventId, { $push: { guests: userId } }).populate('guests');
     res.redirect('/homepage');
   } catch (error) {
     next(error);

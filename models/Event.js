@@ -39,7 +39,7 @@ const eventSchema = new Schema({
   },
   guests: [{
     type: ObjectId,
-    ref: 'Event'
+    ref: 'User'
   }],
   creator: String
 },
