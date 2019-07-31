@@ -314,9 +314,6 @@ img {
   margin-bottom: 3%;
 }
 
-.blue-icon {
-  color: #00CED1;
-}
 
 .info-event {
   display: flex;
@@ -433,4 +430,8 @@ i {
 .p-style {
   margin-left: 15%;
   font-size: 20px;
+}
+
+.icon-style {
+  width: 50%;
 }

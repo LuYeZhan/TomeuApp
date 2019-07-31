@@ -1,6 +1,9 @@
 {{>footer}}
 <main class="structure">
   <h2>My profile</h2>
+  <form action="/auth/logout" method="POST">
+      <button class="nav-logout" type="submit"><i class="fas fa-sign-out-alt"></i></button>
+    </form>
   <h3>Welcome {{username}}!</h3>
 
   <section class="profile-card">
