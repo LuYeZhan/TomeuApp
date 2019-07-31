@@ -16,7 +16,6 @@ body {
   height:100vh;
 }
 
-
 /* ---- typography ---- */
 
 body {
@@ -26,15 +25,10 @@ body {
   line-height: 147%;
 }
 
-h1 {}
-
 h2 {
   line-height: 150%;
 }
 
-h3 {
-
-}
 
 p {
   margin: 1px;
@@ -220,7 +214,7 @@ ul {
   text-align: center;
 }
 
-nav {
+footer {
   background-color: #FDA38E;
   position: fixed;
   width: 100%;
@@ -347,5 +341,4 @@ input {
 
  .opacity{
    opacity:0.2;
-
  }
