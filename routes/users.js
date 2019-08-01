@@ -48,13 +48,12 @@ router.post('/:id/update-profile', isNotLoggedIn, isCorrectId, parser.single('im
   } else {
     imageurl = '../images/profile-placeholder.png';
   }
-  const { username, country, age, about, password } = req.body;
+  const { username, country, age, about } = req.body;
   const newUser = {
     username,
     country,
     age,
     about,
-    password,
     image: imageurl
   };
   try {

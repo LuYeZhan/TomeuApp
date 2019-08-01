@@ -49,8 +49,9 @@ router.post('/login', isLoggedIn, isFormFilled, async (req, res, next) => {
     const user = await User.findOne({ username });
     if (!user) {
       return res.redirect('/auth/login');
-    }
-    if (bcrypt.compareSync(password /* provided password */, user.password/* hashed password */)) {
+    };
+    console.log(password, user);
+    if (bcrypt.compareSync(password, user.password)) {
       req.session.currentUser = user;
       res.redirect('/homepage');
     } else {
