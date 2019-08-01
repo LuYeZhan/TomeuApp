@@ -6,7 +6,7 @@
     <a  href="/auth/login"><button class="intro">Log in</button></a>
   {{/unless}}
   {{#if currentUser}}
-    <form  action="/auth/logout" method="POST">
+    <form action="/auth/logout" method="POST">
       <button  type="submit">Logout</button>
     </form>
   {{/if}}
