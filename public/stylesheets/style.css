@@ -240,6 +240,7 @@ ul {
   background-color: white;
   box-shadow: 2px 2px 2px 2px whitesmoke;
   margin-bottom: 40px;
+  margin-top: 35px;
 }
 
 
@@ -291,7 +292,7 @@ img {
   flex-direction: row;
   padding: 3%;
   box-shadow: 2px 2px 2px 2px whitesmoke;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .profile-button {
@@ -352,15 +353,15 @@ input {
  }
 
  .text-card{
-   padding: 20px;
+  padding: 7px;
  }
 
  .header {
   width: 100%;
-  margin-bottom: 12px;
-  margin-top: 35px;
+  margin-bottom: 25px;
   border-bottom: 2px solid #ececec;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
+  padding-top: 20px;
 }
 
 article.about-me {
@@ -383,6 +384,7 @@ article.profile {
 section.marker {
   display: flex;
   align-items: flex-end;
+  padding-bottom: 3%;
 }
 
 .country- {
@@ -432,4 +434,10 @@ i {
 
 .icon-style-small {
   width: 10%;
+  margin-right: 8%;
+}
+
+.img-event-style {
+  max-width: 100%;
+  border-radius: 5%;
 }
