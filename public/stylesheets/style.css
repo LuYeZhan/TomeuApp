@@ -34,6 +34,7 @@ h2 {
 p {
   margin: 0;
   padding: 0;
+  font-size: 20px;
 }
 
 .profile-p{
@@ -42,7 +43,7 @@ p {
   color: black;
   margin: 5% 0;
 }
-
+.profile-
 /* ---- layout ---- */
 
 
@@ -69,7 +70,7 @@ p {
 
 button {
   width: 80%;
-  background-color: #FDA38E;
+  background-color: rgb(119, 115, 114);
   color: white;
   border: 1px solid #fff;
   padding: 15px;
@@ -277,12 +278,9 @@ img {
   max-width: 100%;
 }
 
-.nav-logout{
-  background-color: #FDA38E;
-  padding: 0;
-  color: white;
+.logout{
+  margin-left: 40px;
   width: 100%;
-  border-style: none;b
 }
 
 .structure{
@@ -305,8 +303,9 @@ img {
 .profile-card {
   display: flex;
   flex-direction: row;
-  border-style: groove;
   padding: 3%;
+  box-shadow: 2px 2px 2px 2px whitesmoke;
+  margin-bottom: 40px;
 }
 
 .profile-button {
@@ -440,4 +439,17 @@ i {
 
 .dark-grey {
   color: #707070;
+}
+
+.section-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px whitesmoke;
+  margin-bottom: 40px;
 }
