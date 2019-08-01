@@ -1,10 +1,11 @@
 {{>footer}}
 <main class="structure">
-  <h2>My profile</h2>
-  <form action="/auth/logout" method="POST">
-      <button class="nav-logout" type="submit"><i class="fas fa-sign-out-alt"></i></button>
+  <section class= "section-card">
+    <h2>My profile</h2>
+    <form action="/auth/logout" method="POST">
+      <button class="logout" type="submit"><i class="fas fa-sign-out-alt"></i></button>
     </form>
-  <h3>Welcome {{username}}!</h3>
+  </section>  
 
   <section class="profile-card">
     <article class="profile">
@@ -17,6 +18,7 @@
       </form>
     </article>
     <article class="about-me">
+      <p>{{username}}</p>
       <p>Age : {{age}}</p>
       <section class="marker">
         <i class="fas fa-map-marker-alt blue-icon"></i>
@@ -27,7 +29,7 @@
     </article>
   </section>
 
-  <h2>Hosting</h2>
+  <h2 class="header">Hosting</h2>
   <section class="event-list">
 
     {{#each myevents}}
@@ -55,7 +57,7 @@
     </article>
     {{/each}}
 
-    <h2>Attending</h2>
+    <h2 class="header">Attending</h2>
     
     {{#each events}}
     <article>
