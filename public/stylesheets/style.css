@@ -29,9 +29,6 @@ h2 {
   line-height: 150%;
   margin:0;
 }
-h3 {
-}
-
 
 
 
@@ -164,7 +161,7 @@ input {
 }
 
 section.container {
-  padding: 20px;
+  margin-bottom: 5%
   width: 100%;
 }
 
@@ -235,7 +232,6 @@ ul {
   border-radius: 8px;
   background-color: white;
   box-shadow: 2px 2px 2px 2px whitesmoke;
-  margin-bottom: 40px;
   margin-top: 35px;
 }
 
@@ -351,6 +347,9 @@ input {
 
  .text-card{
   padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
  }
 
  .header {
@@ -430,7 +429,12 @@ i {
 }
 
 .icon-style-small {
-  width: 10%;
+  width: 20%;
+  margin-right: 8%;
+}
+
+.icon-style-medium {
+  width: 40%;
   margin-right: 8%;
 }
 
@@ -439,18 +443,21 @@ i {
   border-radius: 5%;
 }
 
-.details-info{
-  line-height: 30px;
+.article-homepage {
+  margin-top: 3%;
 }
 
-.details-article{
-
-
+.details-info {
+  margin: 6% 0 8% 5%;
 }
 
-.first-p{
-  margin-top:3%;
+.details-info p {
+  margin-bottom: 3%;
 }
-.last-p{
-  margin-bottom: 10%;
+
+.p-homepage{
+
+  margin-bottom: 5%;
 }
+
+
