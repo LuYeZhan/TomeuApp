@@ -32,35 +32,34 @@
   <h2 class="header">Hosting</h2>
   <section class="event-list">
 
+  <div class="scrolling-wrapper">
     {{#each myevents}}
-    <article>
+    <article class="card-home card-profile-img">
       <div class="info-event">
         <h3 class="profile-p">{{title}}</h3>
       </div>
       <img class="img-resize" src="{{image}}" alt="user's event picture">
-      <section class="text-card">
-        <i class="fas fa-map-marker-alt blue-icon"></i>
-        <p>{{location}}</p>
-        <p>{{description}}</p>
-        <p>{{menu}}</p>
-        <p>{{attenddees}}</p>
-        <p>{{duration}}</p>
-      </section>
       <section class="delete-update">
+        <div>
         <button class="button-margin"><a href="/events/{{_id}}/edit">Edit</a></button>
         <button class="button-delete button-margin" id="{{_id}}">Delete</button>
-      </section>
+        </div>
+        <div>
         {{#each guests}}
         <p class="show-guests">{{username}}</p>
         {{/each}}
-     
+        </div>
+      </section>
+
     </article>
     {{/each}}
-
+    </div> 
+  
     <h2 class="header">Attending</h2>
     
+   <div class="scrolling-wrapper">
     {{#each events}}
-    <article>
+    <article class="card-home card-profile-img">
       <div class="info-event">
         <h3 class="profile-p">{{title}}</h3>
         <i class="fas fa-map-marker-alt blue-icon"></i>
@@ -68,12 +67,14 @@
       </div>
       <img src="{{image}}" alt="user's event picture">
       <div class="delete-update">
-        <button class="button-margin"><a href="/events/{{_id}}/edit">Edit</a></button>
-        <button class="button-delete button-margin" id="{{_id}}">Delete</button>
+        <button class="button-margin button"><a href="/events/{{_id}}/edit">Edit</a></button>
+        <button class="button-delete button-margin button" id="{{_id}}">Delete</button>
       </div>
     </article>
     {{/each}}
+    </div>
   </section>
+
 </main>
 
 <script src="../javascripts/delete.js"></script>
