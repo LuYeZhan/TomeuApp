@@ -275,7 +275,7 @@ img {
 
 .structure{
   padding: 25px;
-  margin-bottom: 8%;
+  margin-bottom: 15%;
 }
 
 .profile-img {
@@ -437,4 +437,20 @@ i {
 .img-event-style {
   max-width: 100%;
   border-radius: 5%;
+}
+
+.details-info{
+  line-height: 30px;
+}
+
+.details-article{
+
+
+}
+
+.first-p{
+  margin-top:3%;
+}
+.last-p{
+  margin-bottom: 10%;
 }
