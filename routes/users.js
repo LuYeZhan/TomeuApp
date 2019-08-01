@@ -65,7 +65,7 @@ router.post('/:id/update-profile', isNotLoggedIn, isCorrectId, parser.single('im
 }
 );
 
-router.post('/:id/delete', isNotLoggedIn, isCorrectId, async (req, res, next) => {
+router.post('/:id/delete', async (req, res, next) => {
   const userId = req.params.id;
   try {
     await User.findByIdAndRemove(userId);
