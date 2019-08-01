@@ -50,12 +50,12 @@ p {
 /* ---- layout ---- */
 
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .container {
     max-width: 728px;
     margin: 0 auto;
   }
-}
+} */
 
 /* ---- components ---- */
 
@@ -163,7 +163,7 @@ input {
 }
 
 section.container {
-  padding: 20px;
+  margin-bottom: 5%
   width: 100%;
 }
 
@@ -440,4 +440,8 @@ i {
 .img-event-style {
   max-width: 100%;
   border-radius: 5%;
+}
+
+.article-homepage {
+  margin-top: 3%;
 }
