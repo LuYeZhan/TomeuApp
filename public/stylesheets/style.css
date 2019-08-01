@@ -279,8 +279,9 @@ img {
 }
 
 .logout{
-  margin-left: 40px;
-  width: 100%;
+  width: 80%;
+  border-style: none;
+  background-color: white;
 }
 
 .structure{
@@ -413,11 +414,11 @@ section.marker {
   width: 22%;
 }
 
-.section-card {
+/* .section-card {
   margin-top: 5%;
     display: flex;
     align-items: flex-end;
-}
+} */
 
 .info {
   display: flex;
@@ -443,7 +444,7 @@ i {
 
 .section-card{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 0;
   text-align: center;
