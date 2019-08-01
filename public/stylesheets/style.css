@@ -47,17 +47,17 @@ p {
 /* ---- layout ---- */
 
 
-#site-header {
+/* #site-header {
   padding: 30px 0;
   color: white;
   background: #111;
-}
+} */
 
-#site-footer {
+/* #site-footer {
   color: white;
   padding: 60px 0;
   background: #111;
-}
+} */
 
 @media (min-width: 768px) {
   .container {
@@ -225,6 +225,7 @@ footer {
   padding: 3%;
   background: rgba(255,255,255);
   border: 1px solid #ececec;
+  border-radius: 6% 6% 0 0;
 }
 
 ul {
@@ -278,8 +279,9 @@ img {
 }
 
 .logout{
-  margin-left: 40px;
-  width: 100%;
+  width: 80%;
+  border-style: none;
+  background-color: white;
 }
 
 .structure{
@@ -364,14 +366,15 @@ input {
    opacity:0.2;
  }
 
- nav {
+ /* nav {
   background-color: white;
   position: fixed;
   top: 0;
   height: 8%;
   width: 100%;
-  border: 1px solid 	rgb(220,220,220, 0.2)
- }
+  border: 1px solid 	rgb(220,220,220, 0.2);
+  border-radius: 5%;
+ } */
 
  .text-card{
    padding: 20px;
@@ -380,7 +383,7 @@ input {
  .header {
   width: 100%;
   margin-bottom: 40px;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 2px solid #ececec;
   padding-bottom: 15px;
 }
 
@@ -411,11 +414,11 @@ section.marker {
   width: 22%;
 }
 
-.section-card {
+/* .section-card {
   margin-top: 5%;
     display: flex;
     align-items: flex-end;
-}
+} */
 
 .info {
   display: flex;
@@ -441,7 +444,7 @@ i {
 
 .section-card{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 0;
   text-align: center;

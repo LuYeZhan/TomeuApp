@@ -1,5 +1,8 @@
 <main class="structure">
-<h3>Edit you event</h3>
+  <section class="header dark-grey">
+<h2>Edit you event</h2>
+</section>
+<section>
 
 <form class="event-form" action="/events/{{_id}}/edit" method="POST" enctype="multipart/form-data">
   <input type="text" name="title" id="title" required value="{{title}}">
@@ -24,5 +27,6 @@
 
   <button type="submit">Update your event!</button>
 </form>
+</section>
 </main>
 {{> footer}}
