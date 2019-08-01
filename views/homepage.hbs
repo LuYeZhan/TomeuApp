@@ -14,19 +14,21 @@
   </section>
 
   <section>
-    <h3>Check out all the events!</h3>
+    <section class="header"> 
+      <h3 class="dark-grey">Check out all the events!</h3>
+    </section>
     {{#each event}}
     
       <article>
-        <h3 class="title">{{title}}</h3>
-        <a href="details/{{_id}}"><img class="image" src="{{image}}" alt="event image"></a>
+        <h3>{{title}}</h3>
+        <a href="details/{{_id}}"><img class="img-event-style" src="{{image}}" alt="event image"></a>
         <section class="info">
           <section class="section-card-homepage">
           <img src="../images/location.png" class="icon-style-small" alt="location icon">
           <p class="p-style">{{location}}</p>
           </section>
           <section class="section-card-homepage">
-            <i class="fas fa-user-friends"></i>
+          <img src="../images/attendees1.png" class="icon-style-medium" alt="attendees icon">
           <p class="p-style">{{attendees}}</p>
           </section>
         </section>

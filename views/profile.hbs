@@ -21,8 +21,7 @@
       <p>{{username}}</p>
       <p>Age : {{age}}</p>
       <section class="marker">
-        <i class="fas fa-map-marker-alt blue-icon"></i>
-        <p>{{country}}</p>
+        <p>Country: {{country}}</p>
       </section>
       <h3>About Me!</h3>
       <p>{{about}}</p>
@@ -39,29 +38,29 @@
         <h3 class="profile-p">{{title}}</h3>
       </section> 
       <img class="img-event-style" src="{{image}}" alt="user's event picture">
-      <sgit section class="text-card">
+
+      <section class="text-card">
         <section class="marker">
           <img src="../images/location.png" class="icon-style-small" alt="location icon">
           <p>{{location}}</p>
         </section>
         <section class="marker">
-          <img src="../images/attendees.png" class="icon-style-small" alt="attendees icon">
+          <img src="../images/attendees1.png" class="icon-style-medium" alt="attendees icon">
           <p>{{attendees}}</p>
         </section>
-        <section class="marker">
-          <img src="../images/icon-food.png" class="icon-style-small" alt="food icon">
-          <p>{{menu}}</p>
-        </section>
-      </sgit>
+      </section>
+      <section>
+        {{#each guests}}
+        <p class="show-guests">Guests: {{username}}</p>
+        {{/each}}
+      </section>
+
       <section class="delete-update">
         <div>
         <button class="button-margin"><a href="/events/{{_id}}/edit">Edit</a></button>
         <button class="button-delete button-margin" id="{{_id}}">Delete</button>
         </div>
-        <div>
-        {{#each guests}}
-        <p class="show-guests">{{username}}</p>
-        {{/each}}
+    
     </article>
     {{/each}}
     </div> 
@@ -73,19 +72,15 @@
     <article class="card-home card-profile-img">
       <div class="info-event">
         <h3 class="profile-p">{{title}}</h3>
-      <img src="{{image}}" alt="user's event picture">
+      <img class="img-event-style" src="{{image}}" alt="user's event picture">
       <section class="text-card">
         <section class="marker">
           <img src="../images/location.png" class="icon-style-small" alt="location icon">
           <p>{{location}}</p>
         </section>
         <section class="marker">
-          <img src="../images/attendees.png" class="icon-style-small" alt="attendees icon">
+          <img src="../images/attendees1.png" class="icon-style-medium" alt="attendees icon">
           <p>{{attendees}}</p>
-        </section>
-        <section class="marker">
-          <img src="../images/icon-food.png" class="icon-style-small" alt="food icon">
-          <p>{{menu}}</p>
         </section>
       </section>
       <div class="delete-update">

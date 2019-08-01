@@ -54,11 +54,7 @@ p {
     max-width: 728px;
     margin: 0 auto;
   }
-<<<<<<< HEAD
-} */
-=======
 } */ 
->>>>>>> 383d47b7a26562cd4ab00b57bb1033be6f64ac8e
 
 /* ---- components ---- */
 
@@ -239,7 +235,6 @@ ul {
   border-radius: 8px;
   background-color: white;
   box-shadow: 2px 2px 2px 2px whitesmoke;
-  margin-bottom: 40px;
   margin-top: 35px;
 }
 
@@ -279,7 +274,7 @@ img {
 
 .structure{
   padding: 25px;
-  margin-bottom: 8%;
+  margin-bottom: 15%;
 }
 
 .profile-img {
@@ -355,6 +350,9 @@ input {
 
  .text-card{
   padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
  }
 
  .header {
@@ -434,7 +432,12 @@ i {
 }
 
 .icon-style-small {
-  width: 10%;
+  width: 20%;
+  margin-right: 8%;
+}
+
+.icon-style-medium {
+  width: 40%;
   margin-right: 8%;
 }
 
