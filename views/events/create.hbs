@@ -1,6 +1,8 @@
 
 <main class="structure">
-  <h3>Create an awesome event!</h3>
+  <section class="header dark-grey">
+    <h2>Create an awesome event!</h2>
+  </section>
   <form class="event-form" action="/events/create" method="POST" enctype="multipart/form-data">
     <label for="title">Event title</label>
     <input type="text" name="title" id="title" required placeholder="Pizza night">
@@ -25,8 +27,10 @@
 
     <label for="image">Add image</label>
     <input type="file" name="image"/>
-
-    <button type="submit">Add an Event</button>
+    
+    <button type="submit">Add your Event!</button>
   </form>
+</section>
 </main>
+
 {{> footer}}
