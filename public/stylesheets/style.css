@@ -34,7 +34,7 @@ h2 {
 p {
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .profile-p{
@@ -47,9 +47,7 @@ p {
 /* ---- layout ---- */
 
 
-
-
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .container {
     max-width: 728px;
     margin: 0 auto;
@@ -354,7 +352,7 @@ input {
 
  .header {
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 12px;
   border-bottom: 2px solid #ececec;
   padding-bottom: 15px;
 }
