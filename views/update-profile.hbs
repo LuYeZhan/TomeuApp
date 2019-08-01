@@ -1,6 +1,8 @@
-{{>footer}}
 <main class="structure">
-<h1>Update your Profile! </h1>
+  <section class="header">
+    <h2>Update your Profile! </h2>
+  </section>
+ <section>
 <form action="update-profile" method="POST" enctype="multipart/form-data">
   <label for="username">Username</label>
   <input type="text" name="username" id="username" value="{{username}}">
@@ -19,4 +21,6 @@
 
   <button type="submit">Update your profile!</button>
 </form>
+</section>
 </main>
+{{>footer}}

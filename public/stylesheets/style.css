@@ -34,7 +34,7 @@ h2 {
 p {
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .profile-p{
@@ -46,18 +46,6 @@ p {
 .profile-
 /* ---- layout ---- */
 
-
-/* #site-header {
-  padding: 30px 0;
-  color: white;
-  background: #111;
-} */
-
-/* #site-footer {
-  color: white;
-  padding: 60px 0;
-  background: #111;
-} */
 
 @media (min-width: 768px) {
   .container {
@@ -289,12 +277,6 @@ img {
   margin-bottom: 8%;
 }
 
-/* i {
-  color: white;
-  width: 100%;
-  font-size: 28px;
-} */
-
 .profile-img {
   width: 100px;
   height: 100px;
@@ -366,23 +348,13 @@ input {
    opacity:0.2;
  }
 
- /* nav {
-  background-color: white;
-  position: fixed;
-  top: 0;
-  height: 8%;
-  width: 100%;
-  border: 1px solid 	rgb(220,220,220, 0.2);
-  border-radius: 5%;
- } */
-
  .text-card{
    padding: 20px;
  }
 
  .header {
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 12px;
   border-bottom: 2px solid #ececec;
   padding-bottom: 15px;
 }
