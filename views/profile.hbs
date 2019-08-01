@@ -34,11 +34,25 @@
 
   <div class="scrolling-wrapper">
     {{#each myevents}}
-    <article class="card-home card-profile-img">
-      <div class="info-event">
+    <article class="card-home">
+      <section class="info-event">
         <h3 class="profile-p">{{title}}</h3>
-      </div>
-      <img class="img-resize" src="{{image}}" alt="user's event picture">
+      </section> 
+      <img class="img-event-style" src="{{image}}" alt="user's event picture">
+      <sgit section class="text-card">
+        <section class="marker">
+          <img src="../images/location.png" class="icon-style-small" alt="location icon">
+          <p>{{location}}</p>
+        </section>
+        <section class="marker">
+          <img src="../images/attendees.png" class="icon-style-small" alt="attendees icon">
+          <p>{{attendees}}</p>
+        </section>
+        <section class="marker">
+          <img src="../images/icon-food.png" class="icon-style-small" alt="food icon">
+          <p>{{menu}}</p>
+        </section>
+      </sgit>
       <section class="delete-update">
         <div>
         <button class="button-margin"><a href="/events/{{_id}}/edit">Edit</a></button>
@@ -48,9 +62,6 @@
         {{#each guests}}
         <p class="show-guests">{{username}}</p>
         {{/each}}
-        </div>
-      </section>
-
     </article>
     {{/each}}
     </div> 
@@ -62,13 +73,26 @@
     <article class="card-home card-profile-img">
       <div class="info-event">
         <h3 class="profile-p">{{title}}</h3>
-        <i class="fas fa-map-marker-alt blue-icon"></i>
-        <h3>{{location}}</h3>
-      </div>
       <img src="{{image}}" alt="user's event picture">
+      <section class="text-card">
+        <section class="marker">
+          <img src="../images/location.png" class="icon-style-small" alt="location icon">
+          <p>{{location}}</p>
+        </section>
+        <section class="marker">
+          <img src="../images/attendees.png" class="icon-style-small" alt="attendees icon">
+          <p>{{attendees}}</p>
+        </section>
+        <section class="marker">
+          <img src="../images/icon-food.png" class="icon-style-small" alt="food icon">
+          <p>{{menu}}</p>
+        </section>
+      </section>
       <div class="delete-update">
+        <div>
         <button class="button-margin button"><a href="/events/{{_id}}/edit">Edit</a></button>
         <button class="button-delete button-margin button" id="{{_id}}">Delete</button>
+        </div>
       </div>
     </article>
     {{/each}}

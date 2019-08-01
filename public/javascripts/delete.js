@@ -12,7 +12,7 @@ const main = () => {
         const response = await axios.post(`/api/events/${id}/delete`);
         console.log(response);
         // delete article de la recipe
-        const article = event.target.parentElement.parentElement;
+        const article = event.target.parentElement.parentElement.parentElement;
         console.log(article);
         article.remove();
         console.log(event);

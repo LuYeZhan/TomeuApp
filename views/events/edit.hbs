@@ -7,11 +7,14 @@
 <form class="event-form" action="/events/{{_id}}/edit" method="POST" enctype="multipart/form-data">
   <input type="text" name="title" id="title" required value="{{title}}">
 
+  <label for="location">Where?</label>
+  <input type="text" name="" id="location" required value="{{location}}">
+  
   <label for="date">When?</label>
   <input type="date" name="date" id="date" required value="{{date}}">
 
   <label for="attendees">How many people can join?</label>
-  <input type="number" name="attendees" id="attendees" value="{{attendees}}">
+  <input type="number" name="attendees" id="attendees" required value="{{attendees}}">
 
   <label for="description">What makes the event special?</label>
   <input type="text" name="description" id="description" value="{{description}}">
@@ -20,7 +23,7 @@
   <input type="number" name="duration" id="duration" value="{{duration}}">
 
   <label for="menu">Menu</label>
-  <input type="string" name="menu" id="menu" value="{{menu}}">
+  <input type="string" name="menu" id="menu" required value="{{menu}}">
 
   <label for="image">Add image</label>
   <input type="file" name="image"/>
