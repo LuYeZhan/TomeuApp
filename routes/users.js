@@ -46,7 +46,7 @@ router.post('/:id/update-profile', isNotLoggedIn, isCorrectId, parser.single('im
   if (req.file !== undefined) {
     imageurl = req.file.secure_url;
   } else {
-    imageurl = '../images/profile-icon.png';
+    imageurl = '../images/profile-placeholder.png';
   }
   const { username, country, age, about, password } = req.body;
   const newUser = {

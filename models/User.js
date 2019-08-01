@@ -25,7 +25,7 @@ const userSchema = new Schema({
   },
   image: {
     type: String,
-    default: '../images/profile-icon.png'
+    default: '../images/profile-placeholder.png'
   },
   myevents: [{
     type: ObjectId,
