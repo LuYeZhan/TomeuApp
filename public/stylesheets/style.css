@@ -29,9 +29,6 @@ h2 {
   line-height: 150%;
   margin:0;
 }
-h3 {
-}
-
 
 
 
@@ -449,3 +446,12 @@ i {
 .article-homepage {
   margin-top: 3%;
 }
+
+.details-info {
+  margin: 6% 0 8% 5%;
+}
+
+.details-info p {
+  margin-bottom: 3%;
+}
+

@@ -3,14 +3,16 @@
 <main class="structure">
   <section class="container">
     <article>
+      <section class="header">
       <h2>{{title}}</h2>
-      <img src="{{image}}" alt="events picture">
+      </section>
+      <img class="img-event-style " src="{{image}}" alt="events picture">
       <section class="details-info">
-      <p>Where? {{location}}</p>
-      <p>When? {{date}}</p>
+      <p>Location : {{location}}</p>
+      <p>Date : {{date}}</p>
       <p>Max. guests : {{attendees}}</p>
       <p>Description : {{description}}</p>
-      <p>Duration : {{duration}}</p>
+      <p>Duration : {{duration}} minutes</p>
       <p>Menu : {{menu}}</p>
       </section>
       <form action="/details/{{_id}}" method="POST">
