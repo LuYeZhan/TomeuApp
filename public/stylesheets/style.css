@@ -31,6 +31,9 @@ h2 {
 }
 
 
+
+
+
 p {
   margin: 0;
   padding: 0;
@@ -288,7 +291,7 @@ img {
   flex-direction: row;
   padding: 3%;
   box-shadow: 2px 2px 2px 2px whitesmoke;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .profile-button {
@@ -355,6 +358,7 @@ input {
  .header {
   width: 100%;
   margin-bottom: 12px;
+  margin-top: 35px;
   border-bottom: 2px solid #ececec;
   padding-bottom: 15px;
 }
@@ -379,7 +383,6 @@ article.profile {
 section.marker {
   display: flex;
   align-items: flex-end;
-  margin-top: 23px;
 }
 
 .country- {
@@ -425,4 +428,8 @@ i {
   background-color: white;
   box-shadow: 2px 2px 2px 2px whitesmoke;
   margin-bottom: 40px;
+}
+
+.icon-style-small {
+  width: 10%;
 }

@@ -34,17 +34,24 @@
 
     {{#each myevents}}
     <article>
-      <div class="info-event">
+      <section class="info-event">
         <h3 class="profile-p">{{title}}</h3>
-      </div>
+      </section> 
       <img class="img-resize" src="{{image}}" alt="user's event picture">
       <section class="text-card">
-        <i class="fas fa-map-marker-alt blue-icon"></i>
-        <p>{{location}}</p>
-        <p>{{description}}</p>
-        <p>{{menu}}</p>
-        <p>{{attenddees}}</p>
-        <p>{{duration}}</p>
+        <section class="marker">
+          <img src="../images/location.png" class="icon-style-small" alt="location icon">
+          <p>{{location}}</p>
+        </section>
+        <section class="marker">
+          <img src="../images/location.png" class="icon-style-small" alt="location icon">
+          <p>{{attenddees}}</p>
+        </section>
+        <section class="marker">
+          <img src="../images/icon-food.png" class="icon-style-small" alt="food icon">
+          <p>{{menu}}</p>
+        </section>
+
       </section>
       <section class="delete-update">
         <button class="button-margin"><a href="/events/{{_id}}/edit">Edit</a></button>
@@ -61,11 +68,13 @@
     
     {{#each events}}
     <article>
-      <div class="info-event">
+      <section class="info-event">
         <h3 class="profile-p">{{title}}</h3>
-        <i class="fas fa-map-marker-alt blue-icon"></i>
+        <section>
+          <img src="../images/location.png" class="icon-style" alt="location icon">
         <h3>{{location}}</h3>
-      </div>
+        </section>
+      </section>
       <img src="{{image}}" alt="user's event picture">
       <div class="delete-update">
         <button class="button-margin"><a href="/events/{{_id}}/edit">Edit</a></button>
